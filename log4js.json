@@ -1,0 +1,22 @@
+{
+  "appenders": {
+    "console": {
+      "type": "console"
+    },
+    "file": {
+      "type": "file",
+      "filename": "logfile.log",
+      "maxLogSize": 20480,
+      "backups": 3,
+      "category": ["Server","App","Controller"]
+    }
+  },
+  "categories": {
+    "default": { "appenders": [ "console", "file" ], "level": "ERROR" },
+    "Server": { "appenders": [ "console"], "level": "INFO" },
+    "App": { "appenders": [ "console"], "level": "DEBUG" },
+    "Controller": { "appenders": [ "console"], "level": "DEBUG" }
+  }
+}
+
+
