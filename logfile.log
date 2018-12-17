@@ -1,0 +1,8 @@
+[2018-12-17T11:31:06.184] [DEBUG] app - Database URL used "mongodb://localhost:27017/webfr"
+[2018-12-17T11:31:06.212] [INFO] app - Server started on port 8000
+[2018-12-17T11:31:20.135] [DEBUG] app - Successfully processed GET request for '/'
+[2018-12-17T11:31:20.162] [DEBUG] app - Found 6 questionnaires
+[2018-12-17T11:31:53.691] [DEBUG] app - Database URL used "mongodb://localhost:27017/webfr"
+[2018-12-17T11:31:53.712] [INFO] app - Server started on port 8000
+[2018-12-17T11:32:00.356] [DEBUG] app - Successfully processed GET request for '/'
+[2018-12-17T11:32:00.392] [DEBUG] app - Found 6 questionnaires

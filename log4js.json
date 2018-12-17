@@ -1,22 +1,15 @@
 {
   "appenders": {
-    "console": {
-      "type": "console"
-    },
-    "file": {
+    "out": { "type": "console" },
+    "logfile": {
       "type": "file",
-      "filename": "logfile.log",
-      "maxLogSize": 20480,
-      "backups": 3,
-      "category": ["Server","App","Controller"]
+      "filename": "logfile.log"
     }
   },
   "categories": {
-    "default": { "appenders": [ "console", "file" ], "level": "ERROR" },
-    "Server": { "appenders": [ "console"], "level": "INFO" },
-    "App": { "appenders": [ "console"], "level": "DEBUG" },
-    "Controller": { "appenders": [ "console"], "level": "DEBUG" }
+    "default": { "appenders": [ "out" ], "level": "error" },
+    "app": { "appenders": [ "logfile", "out" ], "level": "debug" },
+    "server": { "appenders": [ "out" ], "level": "info" },
+    "controller": { "appenders": [ "logfile", "out" ], "level": "debug" }
   }
 }
-
-
