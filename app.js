@@ -3,8 +3,10 @@
 const log4js = require('log4js');
 const dotenv = require('dotenv-extended');
 const express = require('express');
+const cors = require('cors');
+const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const Questionnaire = require('./domain/questionnaire');
+const dispatcher = require('./web/questionnaire-controller');
 
 
 // Read the properties from file '.env' and '.env.defaults'
@@ -21,28 +23,25 @@ mongoose.Promise = global.Promise;
 const url = 'mongodb://' + process.env.MONGO_HOST + '/' + process.env.MONGO_DATABASE;
 logger.debug(`Database URL used "${url}"`);
 mongoose.connect(url, {
-    useMongoClient: true
+    useNewUrlParser: true
 });
 
 // Create the Express Server App
 const app = express();
 
+// Configure body-parser. The parser handles the JSON payload.
+app.use(bodyParser.json());
+
+// Enable CORS (for all requests)
+app.use(cors());
+
+// Configure the dispatcher with all its routes
+app.use('/flashcard-express', dispatcher);
+
+
 // Read PORT from the configuration, default to 8000
 const PORT = process.env.PORT || 8000;
 
-app.get('/', (req, res) => {
-    Questionnaire.find((err, questionnaires) => {
-        if (err) {
-          return res.status(400).send('database error');
-        }
-        logger.debug(`Found ${questionnaires.length} questionnaires`);
-        res.status(200).json(questionnaires);
-      });
-
-    logger.debug("Successfully processed %s request for '%s'", req.method, req.url);
-  })
-
-  
 // Start the App as HTTP server
 app.listen(PORT);
 

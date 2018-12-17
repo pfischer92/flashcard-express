@@ -6,3 +6,17 @@
 [2018-12-17T11:31:53.712] [INFO] app - Server started on port 8000
 [2018-12-17T11:32:00.356] [DEBUG] app - Successfully processed GET request for '/'
 [2018-12-17T11:32:00.392] [DEBUG] app - Found 6 questionnaires
+[2018-12-17T14:45:16.272] [DEBUG] app - Database URL used "mongodb://localhost:27017/webfr"
+[2018-12-17T14:45:16.301] [INFO] app - Server started on port 8000
+[2018-12-17T14:45:39.088] [DEBUG] app - Successfully processed GET request for '/'
+[2018-12-17T14:45:39.120] [DEBUG] app - Found 6 questionnaires
+[2018-12-17T14:50:49.641] [DEBUG] app - Database URL used "mongodb://localhost:27017/webfr"
+[2018-12-17T14:50:49.664] [INFO] app - Server started on port 8000
+[2018-12-17T14:51:48.663] [DEBUG] app - Database URL used "mongodb://localhost:27017/webfr"
+[2018-12-17T14:51:48.684] [INFO] app - Server started on port 8000
+[2018-12-17T14:53:13.738] [DEBUG] controller - Found 6 questionnaires
+[2018-12-17T14:53:25.097] [DEBUG] controller - Found 6 questionnaires
+[2018-12-17T14:55:48.985] [DEBUG] app - Database URL used "mongodb://localhost:27017/webfr"
+[2018-12-17T14:55:49.004] [INFO] app - Server started on port 8000
+[2018-12-17T14:56:53.335] [DEBUG] controller - Found 6 questionnaires
+[2018-12-17T14:57:01.744] [DEBUG] controller - Found questionnaire with id "5bb73d4e89139ba23bbafa5a"
